@@ -18,8 +18,7 @@ public class NumberService(IRequestService requestService) : INumberService
         </soap:Envelope>";
 
 
-        var responseXml = await _requestService.SendRequestAsync(xmlRequest, "http://tempuri.org/GetNextNumber");
-        Console.WriteLine("== Rått svar ==");
+        var responseXml = await _requestService.SendRequestAsync(xmlRequest,"http://tempuri.org/GetNextNumber");
         Console.WriteLine(responseXml);
         var envelope = XmlExtensions.DeserializeXml<Envelope>(responseXml);
         return envelope?.Body?.Content?.GetNextNumberResult ?? throw new Exception("Fel vid tolkning av SOAP-svar.");
