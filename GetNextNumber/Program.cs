@@ -1,5 +1,6 @@
 ﻿using GetNextNumber;
 using GetNextNumber.App;
+using GetNextNumber.Interfaces;
 using GetNextNumber.Services;
 using Microsoft.Extensions.DependencyInjection;
 

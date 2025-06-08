@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GetNextNumber.Interfaces;
+
 
 namespace GetNextNumber.Services;
-
 
     public class NumberListService : INumberListService
     {
@@ -13,7 +9,7 @@ namespace GetNextNumber.Services;
         {
             var result = new List<string>();
 
-            for (int i = 0; i <= count; i++)
+            for (int i = 0; i < count; i++)
             {
                 int current = startNumber + i;
 

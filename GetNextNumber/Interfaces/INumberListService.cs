@@ -1,5 +1,4 @@
-﻿
-namespace GetNextNumber.Services;
+﻿namespace GetNextNumber.Interfaces;
 
 public interface INumberListService
 {

@@ -1,4 +1,4 @@
-﻿using GetNextNumber.Services;
+﻿using GetNextNumber.Interfaces;
 
 namespace GetNextNumber.App;
 
@@ -15,7 +15,7 @@ public class ApplicationRunner(INumberService numberService, INumberListService 
             var number = await _numberService.GetNextNumberAsync("TEST");
             Console.WriteLine(number);
 
-            if (!int.TryParse(number, out int start))
+            if (!int.TryParse(number.Data, out int start))
             {
                 Console.WriteLine("Ogiltigt heltal.");
                 return;
